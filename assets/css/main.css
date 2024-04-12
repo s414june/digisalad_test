@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    background: #F2F2F2;
+}
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.items-center{
+    align-items: center;
+}
+.h-fit{
+    height: fit-content;
+}
