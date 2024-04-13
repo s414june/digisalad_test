@@ -1,7 +1,11 @@
-const path = require('path');
+const path = require("path");
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  alias: {
+    "@": path.resolve(__dirname, "./src"),
+    // 其他别名
+  },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   postcss: {
@@ -21,7 +25,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     output: {
-      publicDir: path.join(__dirname, 'docs')
-    }
+      publicDir: path.join(__dirname, "docs"),
+    },
   },
 });
