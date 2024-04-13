@@ -2,9 +2,12 @@ const path = require("path");
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  alias: {
-    "@": path.resolve(__dirname, "./src"),
-    // 其他别名
+  vite: {
+    resolve: {
+      alias: {
+        "@": "/path/to/src",
+      },
+    },
   },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
