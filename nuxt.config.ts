@@ -15,6 +15,11 @@ export default defineNuxtConfig({
           href: "https://use.typekit.net/wel8ibk.css",
         },
       ],
+      script: [
+        {
+          src: "https://www.youtube.com/iframe_api",
+        },
+      ],
     },
   },
 });

@@ -1,14 +1,23 @@
 <template>
   <section class="landing">
     <div class="mask"></div>
-    <iframe
+    <img
+      src="~/assets/img/landing.png"
+      alt="landing"
+      class="temp-img"
+      :class="{ 'opacity-0': !loadingYT }"
+    />
+    <div :class="{ 'opacity-0': loadingYT }" class="player-container">
+      <div id="player"></div>
+    </div>
+    <!-- <iframe
       src="https://www.youtube.com/embed/8_4JRK4QkqU?si=kyXo5NyguDngRCzu&autoplay=1&controls=0&mute=1"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
-    ></iframe>
+    ></iframe> -->
     <div class="decoration">
       <div class="text">
         <span>DIGITAL AGENCY</span>
@@ -45,14 +54,16 @@
   top: 0;
   z-index: -1;
 }
-iframe {
+.temp-img,
+.player-container,
+:deep(#player) {
   width: calc(560px / 315px * 100dvh);
   height: 100dvh;
-  position: relative;
   pointer-events: none;
   position: absolute;
   top: 0;
   z-index: -2;
+  transition: 0.5s;
 }
 .logo {
   position: relative;
@@ -100,3 +111,28 @@ iframe {
   }
 }
 </style>
+<script setup>
+const loadingYT = ref(true);
+onMounted(() => {
+  onYouTubeIframeAPIReady();
+
+  function onYouTubeIframeAPIReady() {
+    let player = new YT.Player("player", {
+      videoId: "8_4JRK4QkqU",
+      events: {
+        onReady: onPlayerReady,
+      },
+      playerVars: {
+        autoplay: 1, // 自動播放視頻
+        controls: 0, // 不顯示控制項
+        mute: 1, // 靜音
+      },
+    });
+  }
+  function onPlayerReady(event) {
+    setTimeout(() => {
+      loadingYT.value = false;
+    }, 3500);
+  }
+});
+</script>
