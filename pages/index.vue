@@ -16,7 +16,7 @@
       <div class="line"></div>
     </div>
     <div class="title-container">
-      <img src="@/assets/img/logo-landing.svg" alt="digi salad" class="logo" />
+      <img src="~/assets/img/logo-landing.svg" alt="digi salad" class="logo" />
       <h2 class="slogan">
         WE CREATE<br />
         AMAZING <br />

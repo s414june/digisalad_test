@@ -2,7 +2,7 @@
   <nav class="nav">
     <div class="logo-container">
       <img
-        src="@/assets/img/logo.svg"
+        src="~/assets/img/logo.svg"
         alt="digi salad"
         class="logo"
         v-show="!isTop"

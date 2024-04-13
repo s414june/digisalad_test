@@ -5,10 +5,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  alias: {
-    "@": path.resolve(__dirname, "./"),
-    // 其他别名
-  },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   postcss: {
