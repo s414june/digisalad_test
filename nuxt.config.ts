@@ -1,8 +1,3 @@
-import * as path from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -20,11 +15,6 @@ export default defineNuxtConfig({
           href: "https://use.typekit.net/wel8ibk.css",
         },
       ],
-    },
-  },
-  nitro: {
-    output: {
-      publicDir: path.join(__dirname, "docs"),
     },
   },
 });
