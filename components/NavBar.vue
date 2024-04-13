@@ -22,6 +22,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: calc(100% - 60px * 2);
+  left: 0;
 }
 .logo-container {
   padding-left: 20px;
