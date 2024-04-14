@@ -1,26 +1,15 @@
 <template>
-  <section class="about" id="about">
-    <div class="scroll-down">
-      <div class="line" :class="{ 'is-top': viewStore.isTop }"></div>
-    </div>
+  <section class="experience" id="experience">
     <div class="container">
       <div class="title-container">
-        <h3 class="title">ABOUT DIGISALAD</h3>
+        <h3 class="title">OUR BRAND EXPERIENCE</h3>
         <div class="line">
+          <img src="~/assets/img/line.svg" alt="decoration-line" />
           <img src="~/assets/img/line.svg" alt="decoration-line" />
           <img src="~/assets/img/line.svg" alt="decoration-line" />
         </div>
       </div>
       <div class="info-container">
-        <iframe
-          src="https://www.youtube.com/embed/IeIRJ9jZ5Ro?si=uQ2TVKSEKmkKHqfW"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          class=""
-        ></iframe>
         <p>
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
           ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
@@ -32,54 +21,17 @@
           leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis
           molestie faucibus.
         </p>
-        <button class="more-btn">
-          <span>VIEW MORE</span>
-        </button>
       </div>
     </div>
-    <HomeAwards />
+    <img src="~/assets/img/client.png" alt="">
   </section>
 </template>
 <style scoped lang="scss">
-.scroll-down {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.experience {
   display: flex;
   flex-direction: column;
   align-items: center;
-  p {
-    color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .line {
-    position: relative;
-    top: -60px;
-    width: 1px;
-    height: 60px;
-    flex-shrink: 0;
-    stroke-width: 1px;
-    transition: 0.3s;
-    background-color: #000;
-    &:not(.is-top) {
-      opacity: 0;
-      transition: 0.3s;
-    }
-  }
-}
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  padding-bottom: 286px;
+  padding-top: 400px;
   position: relative;
 }
 .container {
@@ -113,11 +65,14 @@
   }
   .line {
     text-align: center;
+    transform: translateX(calc(35px));
     white-space: wrap;
     width: max-content;
-    transform: translateX(calc(35px / 2));
-    img:last-child {
+    img:nth-child(2) {
       transform: translateX(-35px);
+    }
+    img:nth-child(3) {
+      transform: translateX(-70px);
     }
   }
 }

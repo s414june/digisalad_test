@@ -52,6 +52,7 @@
   border-radius: 30px;
   padding-top: 286px;
   position: relative;
+  padding-bottom: 400px;
   .container {
     width: 60%;
   }
@@ -86,6 +87,8 @@
   }
   .line {
     text-align: center;
+    white-space: wrap;
+    width: max-content;
     transform: translateX(calc(35px / 2));
     img:last-child {
       transform: translateX(-35px);
@@ -136,7 +139,7 @@
   }
 }
 .view-more-text {
-  margin: 20px 0 400px;
+  margin-top: 20px;
   position: relative;
   p {
     color: #fff;

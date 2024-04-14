@@ -2,4 +2,5 @@
   <HomeLanding />
   <HomeAbout />
   <HomeIngredient />
+  <HomeExperience />
 </template>
