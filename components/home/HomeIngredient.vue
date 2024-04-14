@@ -23,13 +23,24 @@
           </p>
         </article>
         <button class="more-btn">
-          <span>VIEW MORE</span>
+          <span>OUR SERVICES</span>
         </button>
+      </div>
+    </div>
+    <div class="service-container">
+      <div class="service" v-for="(service, index) in serviceList" :key="index">
+        <ServiceBlock
+          :title="service.title"
+          :btn="service.btn"
+          :img="service.img"
+          >{{ service.text }}</ServiceBlock
+        >
       </div>
     </div>
     <div class="view-more-text">
       <p>VIEW MORE DIGISALAD’S INGRADIENTS</p>
     </div>
+    <HomeQuote />
   </section>
 </template>
 <style scoped lang="scss">
@@ -39,7 +50,8 @@
   align-items: center;
   background-color: #26c6d0;
   border-radius: 30px;
-  padding-top: 60px;
+  padding-top: 286px;
+  position: relative;
 }
 .container {
   width: 60%;
@@ -124,7 +136,7 @@
   }
 }
 .view-more-text {
-  margin: 120px 0;
+  margin: 20px 0 400px;
   position: relative;
   p {
     color: #fff;
@@ -152,7 +164,90 @@
     top: 32px;
   }
 }
+.service-container {
+  width: 80%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  .service {
+    position: relative;
+    margin: 80px 25px;
+    width: calc(33.3% - 33.3px);
+    display: flex;
+    justify-content: center;
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
 </style>
 <script setup>
-const viewStore = useViewsStore();
+import ingredient1 from "~/assets/img/ingredient1.png";
+import ingredient2 from "~/assets/img/ingredient2.png";
+import ingredient3 from "~/assets/img/ingredient3.png";
+import ingredient4 from "~/assets/img/ingredient4.png";
+import ingredient5 from "~/assets/img/ingredient5.png";
+import ingredient6 from "~/assets/img/ingredient6.png";
+import ingredient7 from "~/assets/img/ingredient7.png";
+import ingredient8 from "~/assets/img/ingredient8.png";
+import ingredient9 from "~/assets/img/ingredient9.png";
+const serviceList = reactive([
+  {
+    title: "UX Design",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient1,
+  },
+  {
+    title: "UI Design",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient2,
+  },
+  {
+    title: "website development",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient3,
+  },
+  {
+    title: "mobile app development",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient4,
+  },
+  {
+    title: "ecommerce",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient5,
+  },
+  {
+    title: "customer loyalty",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient6,
+  },
+  {
+    title: "digital transformation",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient7,
+  },
+  {
+    title: "digital\nmarketing",
+    btn: "VIEW MORE",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient8,
+  },
+  {
+    title: "BRANDING",
+    btn: "BRANDING",
+    text: "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.",
+    img: ingredient9,
+  },
+]);
 </script>

@@ -1,94 +1,50 @@
 <template>
-  <section class="about" id="about">
-    <div class="scroll-down">
-      <div class="line" :class="{ 'is-top': viewStore.isTop }"></div>
-    </div>
+  <section class="awards" id="awards">
     <div class="container">
       <div class="title-container">
-        <h3 class="title">ABOUT DIGISALAD</h3>
+        <h3 class="title">AWARDS</h3>
         <div class="line">
-          <img src="~/assets/img/line.svg" alt="decoration-line" />
           <img src="~/assets/img/line.svg" alt="decoration-line" />
         </div>
       </div>
       <div class="info-container">
-        <iframe
-          src="https://www.youtube.com/embed/IeIRJ9jZ5Ro?si=uQ2TVKSEKmkKHqfW"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          class=""
-        ></iframe>
         <p>
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
           ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
           Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
           Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci.
-          Donec id dignissim nunc. Donec elit ante, eleifend a dolor et,
-          venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem
-          elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc
-          leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis
-          molestie faucibus.
+          Donec id dignissim nunc.
         </p>
-        <button class="more-btn">
-          <span>VIEW MORE</span>
-        </button>
       </div>
     </div>
-    <HomeAwards />
+    <div class="images">
+      <div v-for="(item, index) in 4" :key="index" class="award-container">
+        <img src="~/assets/img/award.png" alt="award" class="award" />
+      </div>
+    </div>
   </section>
 </template>
 <style scoped lang="scss">
-.scroll-down {
+.awards {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 30px 0 30px 30px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  p {
-    color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .line {
-    position: relative;
-    top: -60px;
-    width: 1px;
-    height: 60px;
-    flex-shrink: 0;
-    stroke-width: 1px;
-    transition: 0.3s;
-    background-color: #000;
-    &:not(.is-top) {
-      opacity: 0;
-      transition: 0.3s;
-    }
-  }
-}
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  padding-bottom: 286px;
-  position: relative;
+  z-index: 2;
+  transform: translateY(50%);
+  margin-left: 150px;
+  padding: 60px;
 }
 .container {
-  width: 60%;
+  width: 40%;
 }
 .title-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  transform: translateX(35px);
   .title {
     color: #262626;
     font-family: "Proxima Nova";
@@ -113,23 +69,16 @@
   }
   .line {
     text-align: center;
-    transform: translateX(calc(35px / 2));
-    img:last-child {
-      transform: translateX(-35px);
-    }
+    transform: translateX(calc(-35px / 2));
   }
 }
 .info-container {
-  margin-top: 70px;
-  text-align: center;
-  iframe {
-    width: 60dvw;
-    height: calc(315px / 560px * 60dvw);
-  }
+  margin-top: 30px;
+  text-align: left;
   p {
     margin: 30px 0;
     color: #262626;
-    text-align: center;
+    text-align: left;
     font-family: "Proxima Nova";
     font-size: 16px;
     font-style: normal;
@@ -164,6 +113,22 @@
     top: 50%;
     transform: translateY(-50%);
     margin: 0 14px;
+  }
+}
+.images {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  .award-container {
+    width: 50%;
+    position: relative;
+  }
+  .award {
+    width: 250px;
+    min-width: calc(100% - 60px);
+    max-width: calc(100% - 60px);
+    padding-right: 30px;
   }
 }
 </style>

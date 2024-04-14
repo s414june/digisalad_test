@@ -39,7 +39,6 @@
       </h2>
     </div>
   </section>
-  <div class="space"></div>
 </template>
 <style scoped lang="scss">
 .landing {
@@ -47,6 +46,7 @@
   height: 100dvh;
   // position: absolute;
   // top: 0;
+  position: relative;
   z-index: -1;
   display: flex;
   justify-content: center;
