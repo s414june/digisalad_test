@@ -1,7 +1,7 @@
 <template>
   <section class="about" id="about">
     <div class="scroll-down">
-      <div class="line"></div>
+      <div class="line" :class="{ 'is-top': viewStore.isTop }"></div>
     </div>
     <div class="container">
       <div class="title-container">
@@ -11,11 +11,32 @@
           <img src="~/assets/img/line.svg" alt="decoration-line" />
         </div>
       </div>
+      <div class="info-container">
+        <iframe
+          src="https://www.youtube.com/embed/IeIRJ9jZ5Ro?si=uQ2TVKSEKmkKHqfW"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class=""
+        ></iframe>
+        <p>
+          Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
+          ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
+          Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
+          Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci.
+          Donec id dignissim nunc. Donec elit ante, eleifend a dolor et,
+          venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem
+          elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc
+          leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis
+          molestie faucibus.
+        </p>
+        <button class="more-btn">
+          <span>VIEW MORE</span>
+        </button>
+      </div>
     </div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, vero
-    consequatur quidem totam tempore doloribus quia veritatis voluptatibus?
-    Repellendus at, dignissimos iure tempora est pariatur earum? A, sunt
-    deserunt!
   </section>
 </template>
 <style scoped lang="scss">
@@ -38,22 +59,29 @@
     text-transform: uppercase;
   }
   .line {
+    position: relative;
+    top: -60px;
     width: 1px;
     height: 60px;
     flex-shrink: 0;
     stroke-width: 1px;
-    stroke: #fff;
+    transition: 0.3s;
     background-color: #000;
+    &:not(.is-top) {
+      opacity: 0;
+      transition: 0.3s;
+    }
   }
 }
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 60px;
+  padding-bottom: 286px;
 }
 .container {
-  margin-top: 60px;
-  width: 80%;
+  width: 60%;
 }
 .title-container {
   display: flex;
@@ -76,7 +104,9 @@
       height: 10px;
       background-color: #ee6c8a;
       border-radius: 100%;
-      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -20px;
     }
   }
   .line {
@@ -87,4 +117,54 @@
     }
   }
 }
+.info-container {
+  margin-top: 70px;
+  text-align: center;
+  iframe {
+    width: 60dvw;
+    height: calc(315px / 560px * 60dvw);
+  }
+  p {
+    margin: 30px 0;
+    color: #262626;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    letter-spacing: 1px;
+  }
+}
+.more-btn {
+  border: 0;
+  border-radius: 1px;
+  background: #26c6d0;
+  padding: 18px 28px;
+  position: relative;
+  padding-right: calc(50px + 14px + 28px);
+  span {
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.222px;
+  }
+  ::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1.229px;
+    flex-shrink: 0;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 14px;
+  }
+}
 </style>
+<script setup>
+const viewStore = useViewsStore();
+</script>

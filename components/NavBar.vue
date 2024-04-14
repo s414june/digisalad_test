@@ -1,36 +1,44 @@
 <template>
-  <nav class="nav">
+  <nav class="nav" :class="{ 'is-top': viewStore.isTop }" id="nav">
     <div class="logo-container">
-      <img
-        src="~/assets/img/logo.svg"
-        alt="digi salad"
-        class="logo"
-        v-show="!isTop"
-      />
+      <img src="~/assets/img/logo.svg" alt="digi salad" class="logo" />
     </div>
     <div class="flex">
       <button class="nav-btn">START YOUR PROJECT</button>
       <div class="menu-btn-container">
-        <MenuBtn :isTop="isTop" />
+        <MenuBtn :isTop="viewStore.isTop" />
       </div>
     </div>
   </nav>
 </template>
 <style scoped lang="scss">
 .nav {
-  padding: 40px 60px;
+  z-index: 10;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: calc(100% - 60px * 2);
   left: 0;
+  transition: 0.3s;
+  &:not(.is-top) {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+    .logo {
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
 }
 .logo-container {
   padding-left: 20px;
 }
 .logo {
   width: 120px;
+  opacity: 0;
+  transition: 0.3s;
 }
 .nav-btn {
   border-radius: 24px;
@@ -53,5 +61,16 @@
 }
 </style>
 <script setup>
-const isTop = ref(true);
+const viewStore = useViewsStore();
+onMounted(() => {
+  window.addEventListener("scroll", () => {
+    const navHeight = document.getElementById("nav").clientHeight;
+    const windowHeight = window.innerHeight;
+    if (window.scrollY >= windowHeight - navHeight) {
+      viewStore.isTop = false;
+    } else {
+      viewStore.isTop = true;
+    }
+  });
+});
 </script>
