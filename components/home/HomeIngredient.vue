@@ -52,9 +52,9 @@
   border-radius: 30px;
   padding-top: 286px;
   position: relative;
-}
-.container {
-  width: 60%;
+  .container {
+    width: 60%;
+  }
 }
 .title-container {
   display: flex;

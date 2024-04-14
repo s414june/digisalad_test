@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="block">
     <div class="img-container">
       <img :src="props.img" :alt="props.title" />
     </div>
@@ -15,7 +15,7 @@
   </div>
 </template>
 <style scoped lang="scss">
-.container {
+.block {
   width: 100%;
   display: flex;
   flex-direction: column;
