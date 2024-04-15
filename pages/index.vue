@@ -3,4 +3,5 @@
   <HomeAbout />
   <HomeIngredient />
   <HomeExperience />
+  <HomeProject />
 </template>

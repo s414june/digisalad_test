@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-    <img src="~/assets/img/client.png" alt="">
+    <img src="~/assets/img/client.png" alt="client" class="client-img">
   </section>
 </template>
 <style scoped lang="scss">
@@ -122,6 +122,9 @@
     transform: translateY(-50%);
     margin: 0 14px;
   }
+}
+.client-img{
+  width: 80%;
 }
 </style>
 <script setup>

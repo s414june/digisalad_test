@@ -61,7 +61,7 @@
   }
   .line {
     position: relative;
-    top: -60px;
+    top: -120px;
     width: 1px;
     height: 60px;
     flex-shrink: 0;
@@ -78,7 +78,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  // padding-top: 60px;
+  padding-top: 120px;
   padding-bottom: 286px;
   position: relative;
 }
