@@ -28,6 +28,17 @@
           </p>
         </div>
       </div>
+      <div class="prev-btn">
+        <img src="../../assets/img/next.svg" alt="" />
+      </div>
+      <div class="next-btn">
+        <img src="../../assets/img/next.svg" alt="" />
+      </div>
+      <div class="pages">
+        <span class="page-now">01</span>
+        <div class="line"></div>
+        <span class="page-total">04</span>
+      </div>
     </div>
   </section>
 </template>
@@ -47,6 +58,7 @@
 .container {
   width: 80%;
   display: flex;
+  position: relative;
 }
 .images-container {
   width: 50%;
@@ -156,6 +168,59 @@
     top: 50%;
     transform: translateY(-50%);
     margin: 0 14px;
+  }
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  background-color: #26c6d0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  img {
+    width: 100%;
+  }
+}
+.prev-btn {
+  left: -100px;
+  img {
+    transform: rotate(180deg);
+  }
+}
+.next-btn {
+  right: -100px;
+}
+.pages {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.222px;
+  .line {
+    width: 1px;
+    height: 50px;
+    background-color: #26c6d0;
+    transform: rotate(45deg);
+  }
+  .page-now {
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
+  .page-total {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
   }
 }
 </style>

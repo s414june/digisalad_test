@@ -1,5 +1,9 @@
 <template>
-  <div class="menu-btn" :class="{ 'is-top': viewStore.isTop }">
+  <div
+    class="menu-btn"
+    :class="{ 'is-top': viewStore.isTop, 'is-open': viewStore.menuOpened }"
+    @click=" viewStore.menuOpened = ! viewStore.menuOpened"
+  >
     <div></div>
     <div></div>
     <div></div>
@@ -24,6 +28,22 @@
     > div {
       background-color: #fff;
       transition: 0.3s;
+    }
+  }
+}
+.is-open {
+  > div {
+    transform: 0.3s;
+    &:first-child {
+      transform: rotate(45deg) translate(6px,9px) scale(1.1);
+      transform-origin: center;
+    }
+    &:nth-child(2) {
+      transform: rotate(-45deg) translate(-3px,0) scale(1.1);
+      transform-origin: center;
+    }
+    &:last-child {
+      opacity: 0;
     }
   }
 }
