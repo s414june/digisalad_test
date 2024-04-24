@@ -117,6 +117,7 @@
   right: 0;
   transition: 0.8s;
   transition-timing-function: linear;
+  backdrop-filter: blur(5px);
   &.is-open {
     transition-timing-function: linear;
     transition: 0.8s;

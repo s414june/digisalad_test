@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css", "animate.css"],
+  plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
   postcss: {
     plugins: {
       autoprefixer: {},

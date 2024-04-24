@@ -2,7 +2,7 @@
   <section class="ingredient" id="ingredient">
     <div class="container">
       <div class="title-container">
-        <h3 class="title">OUR INGRADIENTS</h3>
+        <h3 class="title" data-animate="animate__fadeIn">OUR INGRADIENTS</h3>
         <div class="line">
           <img src="~/assets/img/line-dark.svg" alt="decoration-line" />
           <img src="~/assets/img/line-dark.svg" alt="decoration-line" />
@@ -22,7 +22,7 @@
             Cras lobortis molestie faucibus.
           </p>
         </article>
-        <button class="more-btn">
+        <button class="more-btn" data-animate="animate__fadeIn">
           <span>OUR SERVICES</span>
         </button>
       </div>

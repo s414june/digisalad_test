@@ -19,20 +19,32 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe> -->
-    <div class="scroll-down">
-      <img src="~/assets/img/taste.svg" alt="TASTE US NOW!" />
-      <p>TASTE US NOW!</p>
+    <div class="scroll-down" @click="scrollDown()">
+      <img
+        src="~/assets/img/taste.svg"
+        alt="TASTE US NOW!"
+        class="animate__animated animate__pulse animate__infinite"
+      />
+      <p class="animate__animated animate__pulse animate__infinite">
+        TASTE US NOW!
+      </p>
       <div class="line"></div>
     </div>
-    <div class="decoration">
+    <div
+      class="decoration animate__animated animate__fadeInUp animate__delay-2s"
+    >
       <div class="text">
         <span>DIGITAL AGENCY</span>
       </div>
       <div class="line"></div>
     </div>
     <div class="title-container">
-      <img src="~/assets/img/logo-landing.svg" alt="digi salad" class="logo" />
-      <h2 class="slogan">
+      <img
+        src="~/assets/img/logo-landing.svg"
+        alt="digi salad"
+        class="logo animate__animated animate__fadeIn animate__delay"
+      />
+      <h2 class="slogan animate__animated animate__fadeIn animate__delay-1s">
         WE CREATE<br />
         AMAZING <br />
         DIGITAL EXPERIENCES
@@ -47,7 +59,7 @@
   // position: absolute;
   // top: 0;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   display: flex;
   justify-content: center;
   border-radius: 0 0 30px 30px;
@@ -130,9 +142,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  img {
+    --animate-duration: 2s;
+  }
   p {
     color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
     font-family: "Proxima Nova";
     font-size: 14px;
     font-style: normal;
@@ -140,6 +157,7 @@
     line-height: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
+    --animate-duration: 2s;
   }
   .line {
     width: 1px;
@@ -183,4 +201,8 @@ onMounted(() => {
     }
   }
 });
+function scrollDown() {
+  console.log(111);
+  window.scrollTo(0, window.innerHeight);
+}
 </script>

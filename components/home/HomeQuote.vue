@@ -10,7 +10,7 @@
         <img src="~/assets/img/left-quote.svg" alt="left quote" />
       </div>
       <div class="info-container">
-        <p>
+        <p data-animate="animate__fadeIn">
           A great digital work isn’t about designing beautiful pages purely. It
           is about context - how do we deliver the
           <strong>right experience to the right person at the right time</strong
@@ -76,7 +76,9 @@
   text-align: left;
   p {
     color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
     font-family: "Proxima Nova";
     font-size: 22px;
     font-style: normal;
@@ -85,7 +87,9 @@
     letter-spacing: 2px;
     strong {
       color: #ffbc58;
-      font-feature-settings: "clig" off, "liga" off;
+      font-feature-settings:
+        "clig" off,
+        "liga" off;
       font-family: "Proxima Nova";
       font-size: 22px;
       font-style: normal;
@@ -136,7 +140,9 @@
   .name {
     color: #fff;
     text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
 
     /* H4 */
     font-family: "Proxima Nova";
@@ -151,7 +157,9 @@
   .desc {
     color: #fff;
     text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
     font-family: "Proxima Nova";
     font-size: 16px;
     font-style: italic;

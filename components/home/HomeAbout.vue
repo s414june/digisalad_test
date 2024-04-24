@@ -5,7 +5,7 @@
     </div>
     <div class="container">
       <div class="title-container">
-        <h3 class="title">ABOUT DIGISALAD</h3>
+        <h3 class="title" data-animate="animate__fadeInUp">ABOUT DIGISALAD</h3>
         <div class="line">
           <img src="~/assets/img/line.svg" alt="decoration-line" />
           <img src="~/assets/img/line.svg" alt="decoration-line" />
@@ -21,7 +21,7 @@
           allowfullscreen
           class=""
         ></iframe>
-        <p>
+        <p data-animate="animate__fadeInUp">
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
           ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
           Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
@@ -32,7 +32,7 @@
           leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis
           molestie faucibus.
         </p>
-        <button class="more-btn">
+        <button class="more-btn" data-animate="animate__fadeInRight">
           <span>VIEW MORE</span>
         </button>
       </div>
@@ -50,7 +50,9 @@
   align-items: center;
   p {
     color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
     font-family: "Proxima Nova";
     font-size: 14px;
     font-style: normal;

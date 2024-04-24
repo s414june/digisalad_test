@@ -1,5 +1,5 @@
 <template>
-  <section class="awards" id="awards">
+  <section class="awards" id="awards" data-animate="animate__fadeIn">
     <div class="container">
       <div class="title-container">
         <h3 class="title">AWARDS</h3>

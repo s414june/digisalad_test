@@ -2,7 +2,7 @@
   <div
     class="menu-btn"
     :class="{ 'is-top': viewStore.isTop, 'is-open': viewStore.menuOpened }"
-    @click=" viewStore.menuOpened = ! viewStore.menuOpened"
+    @click="viewStore.menuOpened = !viewStore.menuOpened"
   >
     <div></div>
     <div></div>
@@ -24,6 +24,12 @@
       width: 25px;
     }
   }
+  &.is-open {
+    > div {
+      background-color: #fff;
+      transition: 0.3s;
+    }
+  }
   &.is-top {
     > div {
       background-color: #fff;
@@ -35,11 +41,11 @@
   > div {
     transform: 0.3s;
     &:first-child {
-      transform: rotate(45deg) translate(6px,9px) scale(1.1);
+      transform: rotate(45deg) translate(6px, 9px) scale(1.1);
       transform-origin: center;
     }
     &:nth-child(2) {
-      transform: rotate(-45deg) translate(-3px,0) scale(1.1);
+      transform: rotate(-45deg) translate(-3px, 0) scale(1.1);
       transform-origin: center;
     }
     &:last-child {
