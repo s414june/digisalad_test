@@ -10,12 +10,12 @@ onMounted(() => {
     dom.style.opacity = 0;
   });
   window.addEventListener("scroll", () => {
+    const innerHeight = window.innerHeight;
+    const showOffset = (window.innerHeight / 3) * 2;
     onscrollShowDoms.forEach((dom) => {
-      const innerHeight = window.innerHeight;
+      // const showOffset = innerHeight - dom.clientHeight;
       const animateData = dom.dataset.animate;
-      console.log(dom.clientHeight);
-      const showOffset = innerHeight - dom.clientHeight;
-      if (dom.getBoundingClientRect().top <= showOffset) {
+      if (dom.getBoundingClientRect().top < showOffset) {
         dom.style.opacity = 1;
         dom.classList.add("animate__animated");
         dom.classList.add(animateData);

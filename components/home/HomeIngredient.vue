@@ -10,7 +10,7 @@
       </div>
       <div class="info-container">
         <article>
-          <p>
+          <p data-animate="animate__fadeIn">
             Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
             ullamcorper bibendum bibendum. Duis tincidunt urna non pretium
             porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper
@@ -37,7 +37,7 @@
         >
       </div>
     </div>
-    <div class="view-more-text">
+    <div class="view-more-text" data-animate="animate__fadeIn">
       <p>VIEW MORE DIGISALAD’S INGRADIENTS</p>
     </div>
     <HomeQuote />
@@ -63,7 +63,9 @@
   align-items: center;
   .title {
     color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
     /* H3 */
     font-family: "Proxima Nova";
     font-size: 28px;
@@ -143,7 +145,9 @@
   position: relative;
   p {
     color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
 
     /* Caption */
     font-family: "Proxima Nova";

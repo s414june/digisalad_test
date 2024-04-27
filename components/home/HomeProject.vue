@@ -2,20 +2,22 @@
   <section class="project" id="project">
     <div class="container">
       <div class="images-container">
-        <div class="images"></div>
-        <button class="more-btn">
+        <div class="images" data-animate="animate__fadeIn"></div>
+        <button class="more-btn" data-animate="animate__fadeIn">
           <span>VIEW PROJECT</span>
         </button>
       </div>
       <div class="project-container">
         <div class="title-container">
-          <h6 class="sub-title">HIGHLIGHTED SHOWCASE</h6>
-          <div class="title">
+          <h6 class="sub-title" data-animate="animate__fadeIn">
+            HIGHLIGHTED SHOWCASE
+          </h6>
+          <div class="title" data-animate="animate__fadeIn">
             <h5>LP CLUB MOBILE APP</h5>
           </div>
         </div>
         <div class="info-container">
-          <p>
+          <p data-animate="animate__fadeIn">
             Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
             ullamcorper bibendum bibendum. Duis tincidunt urna non pretium
             porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper
@@ -127,7 +129,9 @@
 }
 .info-container {
   color: #fff;
-  font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
 
   /* Body / White */
   font-family: "Proxima Nova";

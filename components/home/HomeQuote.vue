@@ -1,13 +1,20 @@
 <template>
   <section class="quote" id="quote">
     <div class="images">
-      <img src="~/assets/img/founder.png" alt="founder" class="founder-img" />
-      <h4 class="name">Tony Ng</h4>
-      <h5 class="desc">Founder & Creative Director</h5>
+      <img
+        src="~/assets/img/founder.png"
+        alt="founder"
+        class="founder-img"
+        data-animate="animate__fadeIn"
+      />
+      <h4 class="name" data-animate="animate__fadeIn">Tony Ng</h4>
+      <h5 class="desc" data-animate="animate__fadeIn">
+        Founder & Creative Director
+      </h5>
     </div>
     <div class="container">
       <div class="title-container">
-        <img src="~/assets/img/left-quote.svg" alt="left quote" />
+        <img src="~/assets/img/left-quote.svg" alt="left quote" data-animate="animate__fadeIn" />
       </div>
       <div class="info-container">
         <p data-animate="animate__fadeIn">

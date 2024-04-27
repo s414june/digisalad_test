@@ -1,14 +1,14 @@
 <template>
-  <section class="awards" id="awards" data-animate="animate__fadeIn">
+  <section class="awards" id="awards">
     <div class="container">
       <div class="title-container">
-        <h3 class="title">AWARDS</h3>
-        <div class="line">
+        <h3 class="title" data-animate="animate__fadeIn">AWARDS</h3>
+        <div class="line" data-animate="animate__fadeIn">
           <img src="~/assets/img/line.svg" alt="decoration-line" />
         </div>
       </div>
       <div class="info-container">
-        <p>
+        <p data-animate="animate__fadeIn">
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
           ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
           Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
@@ -18,7 +18,12 @@
       </div>
     </div>
     <div class="images">
-      <div v-for="(item, index) in 4" :key="index" class="award-container">
+      <div
+        v-for="(item, index) in 4"
+        :key="index"
+        class="award-container"
+        data-animate="animate__fadeIn"
+      >
         <img src="~/assets/img/award.png" alt="award" class="award" />
       </div>
     </div>

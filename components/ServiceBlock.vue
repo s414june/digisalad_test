@@ -1,17 +1,17 @@
 <template>
   <div class="block">
-    <div class="img-container">
+    <div class="img-container" data-animate="animate__fadeIn">
       <img :src="props.img" :alt="props.title" />
     </div>
-    <h4 class="title">{{ props.title }}</h4>
-    <p class="text">
+    <h4 class="title" data-animate="animate__fadeIn">{{ props.title }}</h4>
+    <p class="text" data-animate="animate__fadeIn">
       <slot
         >Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
         ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
         Nam condimentum vitae ligula vel ornare.</slot
       >
     </p>
-    <button class="btn">{{ props.btn }}</button>
+    <button class="btn" data-animate="animate__fadeIn">{{ props.btn }}</button>
   </div>
 </template>
 <style scoped lang="scss">
@@ -36,7 +36,9 @@
     align-items: center;
     color: #fff;
     text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
+    font-feature-settings:
+      "clig" off,
+      "liga" off;
 
     /* H4 */
     font-family: "Proxima Nova";

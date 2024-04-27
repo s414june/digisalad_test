@@ -2,7 +2,7 @@
   <section class="experience" id="experience">
     <div class="container">
       <div class="title-container">
-        <h3 class="title">OUR BRAND EXPERIENCE</h3>
+        <h3 class="title" data-animate="animate__fadeIn">OUR BRAND EXPERIENCE</h3>
         <div class="line">
           <img src="~/assets/img/line.svg" alt="decoration-line" />
           <img src="~/assets/img/line.svg" alt="decoration-line" />
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="info-container">
-        <p>
+        <p data-animate="animate__fadeIn">
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
           ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.
           Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-    <img src="~/assets/img/client.png" alt="client" class="client-img">
+    <img src="~/assets/img/client.png" alt="client" class="client-img" data-animate="animate__fadeIn">
   </section>
 </template>
 <style scoped lang="scss">
