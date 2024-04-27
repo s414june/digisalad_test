@@ -169,6 +169,31 @@
     margin-top: 10px;
   }
 }
+@media screen and (max-width: 992px) {
+  .title-container {
+    margin-top: 58px;
+    padding-top: 50px;
+    width: calc(100% - 120px);
+  }
+  .logo {
+    width: 100px;
+  }
+  .slogan {
+    margin: 0;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .decoration {
+    margin-left: 24px;
+    span {
+      font-size: 12px;
+    }
+    .line {
+      width: 1px;
+      height: 100px;
+    }
+  }
+}
 </style>
 <script setup>
 const loadingYT = ref(true);

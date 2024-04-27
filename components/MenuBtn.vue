@@ -11,17 +11,26 @@
 </template>
 <style scoped lang="scss">
 .menu-btn {
+  --menu-height: 3px;
+  --menu-width: calc(var(--menu-height) * 10);
+  --menu-width-last: calc(var(--menu-width) / 6 * 5);
+  --menu-gap: calc(var(--menu-height) * 2);
+
+  @media screen and (max-width: 992px) {
+    --menu-height: 2.5px;
+  }
+
   display: grid;
-  grid-row-gap: 6px;
+  grid-row-gap: var(--menu-gap);
   justify-items: end;
   > div {
-    width: 30px;
-    height: 3px;
-    border-radius: 3px;
+    width: var(--menu-width);
+    height: var(--menu-height);
+    border-radius: calc(var(--menu-height) / 2);
     background-color: #000;
     transition: 0.3s;
     &:last-child {
-      width: 25px;
+      width: var(--menu-width-last);
     }
   }
   &.is-open {
@@ -41,11 +50,15 @@
   > div {
     transform: 0.3s;
     &:first-child {
-      transform: rotate(45deg) translate(6px, 9px) scale(1.1);
+      --tran-x: calc(var(--menu-height) * 2);
+      --tran-y: calc(var(--menu-height) * 3);
+      transform: rotate(45deg) translate(var(--tran-x), var(--tran-y))
+        scale(1.1);
       transform-origin: center;
     }
     &:nth-child(2) {
-      transform: rotate(-45deg) translate(-3px, 0) scale(1.1);
+      --tran-x: calc(var(--menu-height) * (-1));
+      transform: rotate(-45deg) translate(var(--tran-x), 0) scale(1.1);
       transform-origin: center;
     }
     &:last-child {

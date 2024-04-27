@@ -68,6 +68,7 @@
   align-items: center;
   position: fixed;
   width: calc(100% - 60px * 2);
+  top: 0;
   left: 0;
   transition: 0.3s;
   &:not(.is-top) {
@@ -82,6 +83,8 @@
 }
 .logo-container {
   padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 .logo {
   width: 120px;
@@ -249,6 +252,23 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .nav{
+    padding: 10px 20px;
+    width: calc(100dvw - 20px * 2);
+  }
+  .logo{
+    width: 85px;
+  }
+  .menu-btn-container{
+    margin-left: 10px;
+  }
+  .nav-btn{
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
 </style>
 <script setup>
 const viewStore = useViewsStore();

@@ -1,11 +1,15 @@
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100dvw;
+  position: relative;
 }
 body {
   margin: 0;
   background: #f2f2f2;
   overflow-x: hidden;
-  width: 100%;
+  width: 100dvw;
+  position: relative;
 }
 .flex {
   display: flex;
