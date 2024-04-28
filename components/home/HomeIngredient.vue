@@ -55,6 +55,9 @@
   padding-bottom: 400px;
   .container {
     width: 60%;
+    @media screen and (max-width: 992px) {
+    width: calc(100% - 50px);
+  }
   }
 }
 .title-container {
@@ -68,7 +71,9 @@
       "liga" off;
     /* H3 */
     font-family: "Proxima Nova";
-    font-size: 28px;
+      @media screen and (max-width: 992px) {
+    font-size: 24px
+  };
     font-style: normal;
     font-weight: 700;
     line-height: normal;

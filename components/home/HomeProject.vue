@@ -61,6 +61,9 @@
   width: 80%;
   display: flex;
   position: relative;
+  @media screen and (max-width: 992px) {
+    width: calc(100% - 50px);
+  }
 }
 .images-container {
   width: 50%;

@@ -17,7 +17,7 @@
   --menu-gap: calc(var(--menu-height) * 2);
 
   @media screen and (max-width: 992px) {
-    --menu-height: 2.5px;
+    --menu-height: 2px;
   }
 
   display: grid;

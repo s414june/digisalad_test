@@ -128,6 +128,9 @@
     @media (max-aspect-ratio: 1) {
       width: 100dvh;
       height: 100dvh;
+      &.is-open {
+        clip-path: ellipse(150dvh 150dvh at 100% 0%);
+      }
     }
   }
 }
@@ -141,49 +144,51 @@
   opacity: 0.9;
 }
 .menu-about {
-  width: 350px;
-  height: 200px;
+  width: 26%;
+  height: 15dvw;
   border-radius: 30px;
   background: #26c6d0;
   background-image: url(~/assets/img/menu-about.png);
   left: 10%;
+  bottom: 57%;
 }
 .menu-careers {
   flex-direction: column;
-  top: 60px;
-  width: 290px;
-  height: 430px;
+  width: 20%;
+  height: 29dvw;
   border-radius: 30px;
   background: #e6a94e;
   background-image: url(~/assets/img/menu-careers.png);
-  left: 40%;
+  left: 39%;
+  bottom: 40%;
 }
 .menu-insights {
-  width: 350px;
-  height: 200px;
+  width: 24%;
+  height: 14dvw;
   border-radius: 30px;
   background: #26d0a8;
   background-image: url(~/assets/img/menu-insights.png);
-  left: 40%;
-  bottom: 90px;
+  left: 39%;
+  top: 65%;
 }
 .menu-services {
-  width: 380px;
-  height: 320px;
+  width: 28%;
+  height: 20dvw;
   border-radius: 30px;
   background: #585880;
   background-image: url(~/assets/img/menu-services.png);
   right: 10%;
+  bottom: 47%;
 }
 .menu-works {
-  width: 380px;
-  height: 320px;
+  width: 26%;
+  height: 20dvw;
   flex-shrink: 0;
   border-radius: 30px;
   background: #ff7a7a;
   background-image: url(~/assets/img/menu-works.png);
   left: 10%;
-  bottom: 15%;
+  top: 48%;
   .title {
     &::before {
       background-color: #26c6d0 !important;
@@ -191,12 +196,12 @@
   }
 }
 .menu-contact {
-  width: 350px;
-  height: 200px;
+  width: 24%;
+  height: 14dvw;
   border-radius: 30px;
   background: #fff;
   right: 10%;
-  bottom: 15%;
+  top: 58%;
   .sub-title {
     color: #262626 !important;
   }
@@ -206,6 +211,13 @@
 }
 .menu-logo-container {
   padding: 40px 60px;
+  @media screen and (max-width: 992px) {
+    padding: 20px 30px;
+    background-size: cover;
+    > img {
+      width: 100px;
+    }
+  }
 }
 .menu-item {
   position: absolute;
@@ -222,7 +234,7 @@
   .sub-title {
     color: #fff;
     font-family: "Proxima Nova";
-    font-size: 16px;
+    font-size: 1dvw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -233,7 +245,7 @@
     margin: 0;
     color: #fff;
     font-family: "Proxima Nova";
-    font-size: 32px;
+    font-size: 2dvw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -253,22 +265,21 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .nav{
-    padding: 10px 20px;
-    width: calc(100dvw - 20px * 2);
+  .nav {
+    padding: 10px 10px;
+    width: calc(100dvw - 10px * 2);
   }
-  .logo{
+  .logo {
     width: 85px;
   }
-  .menu-btn-container{
+  .menu-btn-container {
     margin-left: 10px;
   }
-  .nav-btn{
+  .nav-btn {
     font-size: 10px;
     padding: 10px;
   }
 }
-
 </style>
 <script setup>
 const viewStore = useViewsStore();
