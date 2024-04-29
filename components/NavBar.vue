@@ -146,59 +146,100 @@
 .menu-about {
   width: 26%;
   height: 15dvw;
-  border-radius: 30px;
   background: #26c6d0;
   background-image: url(~/assets/img/menu-about.png);
   left: 10%;
   bottom: 57%;
+  .menu-img {
+    width: 15% !important;
+  }
+  @media (max-aspect-ratio: 0.8) {
+    width: 40%;
+    height: 25dvw;
+    bottom: 65%;
+    left: 9%;
+    border-radius: 20px;
+  }
 }
 .menu-careers {
   flex-direction: column;
   width: 20%;
   height: 29dvw;
-  border-radius: 30px;
+
   background: #e6a94e;
   background-image: url(~/assets/img/menu-careers.png);
   left: 39%;
   bottom: 40%;
+  .menu-img {
+    margin: 0 0 8% 0;
+    width: 30% !important;
+  }
+  @media (max-aspect-ratio: 0.8) {
+    width: 29%;
+    height: 46dvw;
+    bottom: 60%;
+    left: unset;
+    right: 16%;
+  }
 }
 .menu-insights {
   width: 24%;
   height: 14dvw;
-  border-radius: 30px;
   background: #26d0a8;
   background-image: url(~/assets/img/menu-insights.png);
   left: 39%;
   top: 65%;
+  @media (max-aspect-ratio: 0.8) {
+    width: 40%;
+    height: 25dvw;
+    top: 60%;
+    left: unset;
+    right: 5%;
+  }
 }
 .menu-services {
   width: 28%;
   height: 20dvw;
-  border-radius: 30px;
   background: #585880;
   background-image: url(~/assets/img/menu-services.png);
   right: 10%;
   bottom: 47%;
+  @media (max-aspect-ratio: 0.8) {
+    width: 40%;
+    height: 25dvw;
+    right: unset;
+    left: 9%;
+    bottom: 48%;
+  }
 }
 .menu-works {
   width: 26%;
   height: 20dvw;
   flex-shrink: 0;
-  border-radius: 30px;
   background: #ff7a7a;
   background-image: url(~/assets/img/menu-works.png);
   left: 10%;
   top: 48%;
+  .menu-img {
+    width: 13% !important;
+  }
   .title {
     &::before {
       background-color: #26c6d0 !important;
     }
   }
+  @media (max-aspect-ratio: 0.8) {
+    width: 40%;
+    height: 25dvw;
+    right: unset;
+    left: 9%;
+    top: 55%;
+  }
 }
 .menu-contact {
   width: 24%;
   height: 14dvw;
-  border-radius: 30px;
+
   background: #fff;
   right: 10%;
   top: 58%;
@@ -208,12 +249,17 @@
   .title {
     color: #26c6d0 !important;
   }
+  @media (max-aspect-ratio: 0.8) {
+    width: 40%;
+    height: 25dvw;
+    right: 5%;
+    top: 43%;
+  }
 }
 .menu-logo-container {
   padding: 40px 60px;
   @media screen and (max-width: 992px) {
     padding: 20px 30px;
-    background-size: cover;
     > img {
       width: 100px;
     }
@@ -224,12 +270,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  border-radius: 5dvw;
   .menu-img {
-    width: 50px;
+    width: 9%;
     height: fit-content;
     max-height: 80px;
     max-width: fit-content;
-    margin-right: 20px;
+    margin-right: 6%;
   }
   .sub-title {
     color: #fff;
@@ -240,6 +288,9 @@
     line-height: normal;
     letter-spacing: 1.8px;
     margin: 0;
+    @media (max-aspect-ratio: 0.8) {
+      font-size: 1.5dvw;
+    }
   }
   .title {
     margin: 0;
@@ -254,13 +305,16 @@
     &::before {
       content: "";
       position: absolute;
-      width: 10px;
-      height: 10px;
+      width: 0.7dvw;
+      height: 0.7dvw;
       background-color: #ee6c8a;
       border-radius: 100%;
       top: 60%;
       transform: translateY(-50%);
       right: 0px;
+    }
+    @media (max-aspect-ratio: 0.8) {
+      font-size: 3dvw;
     }
   }
 }
