@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 	experimental: {
 		// 關閉 payloadExtraction 減少對 build/meta 雜湊 JSON 的依賴
 		payloadExtraction: false,
+		appManifest: false, // 關閉 PWA app manifest 生成
 	},
 	nitro: {
 		preset: "vercel", // 強制指定為 vercel 預設環境
