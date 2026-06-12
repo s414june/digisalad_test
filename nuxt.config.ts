@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css", "animate.css"],
-	plugins: ["~/plugins/aos.client"],
+	plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
 	postcss: {
 		plugins: {
 			autoprefixer: {},
